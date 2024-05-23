@@ -53,6 +53,7 @@ nav {
 
 .nav-link {
   color: black;
+  font-size: 1.5rem;
 }
 .nav-link i {
   padding: 8px;
@@ -318,7 +319,8 @@ nav {
 }
 .team__img {
   width: 100%;
-  margin-bottom: 1em;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 .team__title {
   margin-bottom: 0.5em;
@@ -330,8 +332,9 @@ nav {
 }
 
 .contact {
-  padding-bottom: 4em;
-  padding-top: 4em;
+  padding-bottom: 6em;
+  padding-top: 6em;
+  background-color: black;
 }
 .contact__box {
   display: flex;
@@ -345,7 +348,7 @@ nav {
   margin-top: 2em;
 }
 .contact__box--bgc {
-  width: 70%;
+  width: 90%;
   height: 100%;
   position: absolute;
   background-color: black;
@@ -362,7 +365,7 @@ nav {
 .contact__box__text {
   margin-bottom: 1em;
   color: #ffffff;
-  font-size: 1em;
+  font-size: 0.8em;
   z-index: 1;
   transition: color 1s ease;
 }
@@ -411,7 +414,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid black;
+  border-top: 1px solid #dda344;
   background-color: black;
   color: #ffffff;
 }
@@ -461,9 +464,12 @@ nav {
   .team__box {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
   .team__box-text {
-    width: 55%;
+    width: 59%;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .team__box-text--right {
     text-align: right;
@@ -476,7 +482,6 @@ nav {
   }
   .team__img {
     margin-bottom: 0;
-    max-height: 300px;
   }
 }
 @media (min-width: 768px) {
@@ -507,7 +512,7 @@ nav {
     margin: 0 2em;
   }
   .contact__box--bgc {
-    width: 80%;
+    width: 90%;
     height: 80%;
   }
   .contact__map {
@@ -541,7 +546,7 @@ nav {
   }
   .navbar-nav {
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .hero {
     /* position: relative; */
@@ -557,14 +562,16 @@ nav {
   .team__box-text {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    margin-bottom: 2.5em;
+    justify-content: center;
   }
   .team__title {
     font-size: 2.6rem;
   }
   .team__text {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+  .contact__box__text {
+    font-size: 1em;
   }
 }
 @media (min-width: 1200px) {
