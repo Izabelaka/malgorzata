@@ -18,7 +18,7 @@ body {
   font-family: "Encode Sans", sans-serif;
   font-size: 16px;
   background-color: rgb(255, 254, 253);
-  line-height: 1.2;
+  line-height: 1.6;
 }
 ul,
 ol {
@@ -770,7 +770,7 @@ nav {
 }
 ///////////////////////////////////////
 .specialization {
-  padding: 0 1rem;
+  // padding: 0 1rem;
   padding-bottom: 8rem;
 
   h3 {
@@ -781,6 +781,7 @@ nav {
     background-color: colors.$gold;
     margin-bottom: 1em;
     text-align: center;
+    text-transform: uppercase;
     i {
       padding: 1rem;
       font-size: 3rem;
@@ -813,13 +814,20 @@ nav {
     padding: 2rem;
     span {
       font-weight: bold;
-      font-size: 2rem;
+      // font-size: 2rem;
     }
 
     &--card {
       text-align: center;
       padding: 2rem;
       font-weight: bold;
+      margin: 0 auto;
+    }
+    &__title {
+      font-size: 2.2rem;
+      color: colors.$gold;
+      // font-weight: bold;
+      margin-top: 2rem;
     }
   }
   &__maintext-wrapper {
@@ -828,9 +836,12 @@ nav {
     align-items: center;
     flex-direction: column;
 
-    p {
-      width: 90%;
-    }
+    // p {
+    //   width: 90%;
+    // }
+    // div {
+    //   width: 90%;
+    // }
   }
 
   &__card {
@@ -918,21 +929,52 @@ nav {
     &__card {
       flex-grow: 1;
     }
+    &__maintext--card {
+      background-image: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.99) 0%,
+          rgba(230, 230, 230, 0.866) 48%,
+          rgba(255, 255, 255, 0.99) 100%
+        ),
+        url("../img/headerBig3.jpg");
+      // padding: 10px 10px;
+
+      background-size: cover;
+      background-position: center;
+      background-attachment: scroll;
+      height: 26rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0;
+
+      p {
+        max-width: 80%;
+        font-size: 2rem;
+        // font-weight: bold;
+        text-align: center;
+        padding: 1rem;
+        text-transform: uppercase;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        background-color: #fafafa84;
+        font-weight: normal;
+      }
+    }
   }
 }
 
 @media (min-width: 1024px) {
   .specialization {
     &__wrapper {
-      gap: 5rem;
+      gap: rem;
     }
   }
 }
 
 // --------------------------------------------person
 .person {
-  padding: 8rem 1rem;
-
   h3 {
     padding: 1em 1em;
     color: #fff;
@@ -941,6 +983,7 @@ nav {
     background-color: colors.$gold;
     margin-bottom: 1em;
     text-align: center;
+    text-transform: uppercase;
     i {
       padding: 1rem;
       font-size: 3rem;
@@ -951,6 +994,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 1rem;
   }
 
@@ -969,6 +1013,22 @@ nav {
       background-color: black;
       color: #fafafa;
       align-self: flex-end;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.6rem;
+
+    &__wrapper {
+      margin: 3rem;
+    }
+
+    &:nth-of-type(1) {
+      font-size: 2rem;
+    }
+    &:nth-of-type(2) {
+      margin-bottom: 4rem;
     }
   }
 
@@ -990,7 +1050,7 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
+    margin: 4rem 0;
     // &__wrapper {
     //   max-width: 90%;
     // }
@@ -1024,6 +1084,13 @@ nav {
         color: #fafafa;
         align-self: flex-end;
         margin-right: 4rem;
+      }
+    }
+
+    &__title {
+      &:nth-of-type(2) {
+        margin-bottom: 4rem;
+        max-width: 70%;
       }
     }
     &-photo {
