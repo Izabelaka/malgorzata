@@ -60,10 +60,6 @@ nav {
   font-size: 2.2rem;
 }
 
-.navbar-toggler-icon {
-  // background-image: none; // Usuwa domyślny gradient
-  // background-color: red; // Ustawia kolor tła, upewnij się, że zmienna $gold jest zdefiniowana
-}
 .navbar-toggler .navbar-toggler-icon::before,
 .navbar-toggler .navbar-toggler-icon::after {
   background-color: black; /* Ustawia kolor linii na czarny */
@@ -566,9 +562,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  &__wrapper {
-    // max-width: 90%;
-  }
+
   &__title {
     font-size: 2rem;
     font-weight: bold;
@@ -771,6 +765,282 @@ nav {
       width: 75%;
       height: 40%;
       margin: 0 2em;
+    }
+  }
+}
+///////////////////////////////////////
+.specialization {
+  padding: 0 1rem;
+  padding-bottom: 8rem;
+
+  h3 {
+    padding: 1em 1em;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: colors.$gold;
+    margin-bottom: 1em;
+    text-align: center;
+    i {
+      padding: 1rem;
+      font-size: 3rem;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 1.1667;
+    letter-spacing: 0.03em;
+
+    text-align: center;
+    font-weight: bold;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 2rem;
+    transform-origin: center center;
+  }
+  &__text {
+    text-align: center;
+    padding: 1rem;
+  }
+  &__maintext {
+    text-align: center;
+    padding: 2rem;
+    span {
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    &--card {
+      text-align: center;
+      padding: 2rem;
+      font-weight: bold;
+    }
+  }
+  &__maintext-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+      width: 90%;
+    }
+  }
+
+  &__card {
+    width: 90%;
+    border: 1px solid colors.$gold;
+    align-items: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    transform-origin: center center;
+    transition: background-color 0.8s ease, transform 0.8s;
+    background-color: #fafafa;
+    // border-radius: 20px;
+
+    // i {
+    //   font-size: 5rem;
+    //   color: black;
+    //   transition: color 0.8s ease;
+    // }
+
+    &__title {
+      font-size: 2rem;
+      text-align: center;
+      color: colors.$gold;
+      transition: color 1.3s ease;
+      font-weight: bold;
+    }
+
+    // &__btn {
+    //   padding: 1.5rem 2rem;
+    //   background-color: black;
+    //   border: 1px solid black;
+    //   // border-radius: 20px;
+    //   transition: background-color 0.8s ease;
+
+    //   a {
+    //     color: #fff;
+    //     font-size: 1.6rem;
+
+    //     i {
+    //       font-size: 1.5rem;
+    //       margin-left: 10px;
+    //       color: #fff;
+    //     }
+    //   }
+    // }
+  }
+}
+.specialization__card:hover,
+.specialization__card:focus {
+  // background-color: #c8a588;
+  // transform: scale(0.9);
+  // border: 1px solid rgba(124, 121, 121, 0.955);
+  box-shadow: 0px 8px 16px 0px rgba(162, 159, 159, 0.955);
+  // box-shadow: 0px 8px 16px 0px #c8a588;
+  // i {
+  //   color: black;
+  // }
+  h4 {
+    color: #fff;
+  }
+  .specialization__card__btn {
+    background-color: #fff;
+    // border: none;
+    cursor: pointer;
+    border: 1px solid black;
+
+    a {
+      color: black;
+      border-bottom: 2px solid black;
+      bottom: 25px;
+      // text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .specialization {
+    &__wrapper {
+      flex-direction: row;
+    }
+    &__card {
+      flex-grow: 1;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .specialization {
+    &__wrapper {
+      gap: 5rem;
+    }
+  }
+}
+
+// --------------------------------------------person
+.person {
+  padding: 8rem 1rem;
+
+  h3 {
+    padding: 1em 1em;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: colors.$gold;
+    margin-bottom: 1em;
+    text-align: center;
+    i {
+      padding: 1rem;
+      font-size: 3rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  &__text {
+    max-width: 90%;
+    padding: 2rem;
+    font-size: 1.6rem;
+
+    &--one {
+      background-color: colors.$gold;
+      align-self: flex-start;
+
+      color: #fafafa;
+    }
+    &--two {
+      background-color: black;
+      color: #fafafa;
+      align-self: flex-end;
+    }
+  }
+
+  &-photo {
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.99) 0%,
+        rgba(230, 230, 230, 0.8) 48%,
+        rgba(255, 255, 255, 0.99) 100%
+      ),
+      url("../img/sBig.jpg");
+    padding: 10px 10px;
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    // &__wrapper {
+    //   max-width: 90%;
+    // }
+    &__title {
+      font-size: 2.5rem;
+      // font-weight: bold;
+      text-align: center;
+      padding: 1rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid black;
+      border-top: 1px solid black;
+      background-color: #fafafab1;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .person {
+    &__text {
+      max-width: 75%;
+      padding: 4rem;
+      margin: 1rem;
+
+      &--one {
+        background-color: colors.$gold;
+        align-self: flex-start;
+        margin-left: 4rem;
+        color: #fafafa;
+      }
+      &--two {
+        background-color: black;
+        color: #fafafa;
+        align-self: flex-end;
+        margin-right: 4rem;
+      }
+    }
+    &-photo {
+      background-image: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.99) 0%,
+          rgba(243, 243, 243, 0.85) 48%,
+          rgba(255, 255, 255, 0.95) 100%
+        ),
+        url("../img/sBig.jpg");
+      background-attachment: fixed;
+      height: 40rem;
+
+      &__title {
+        font-size: 3rem;
+        padding: 2rem;
+      }
     }
   }
 }
