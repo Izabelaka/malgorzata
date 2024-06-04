@@ -163,10 +163,30 @@ nav {
 .about-us__text-two {
   background-color: black;
 }
+.about-us__text a {
+  text-decoration: none;
+  color: #fafafa;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 1s;
+}
+.about-us__text a i {
+  margin: 1rem;
+}
 .about-us__img img {
   width: 100%;
   height: 100%;
   transition: transform 0.3s;
+}
+
+.about-us__text-one a:hover,
+.about-us__text-one a:focus {
+  color: black;
+}
+
+.about-us__text-two a:hover,
+.about-us__text-two a:focus {
+  color: #dda344;
 }
 
 .offers {

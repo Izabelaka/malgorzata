@@ -166,6 +166,16 @@ nav {
       // background-color: rgb(20, 46, 70);
       background-color: colors.$black;
     }
+    a {
+      text-decoration: none;
+      color: #fafafa;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color 1s;
+      i {
+        margin: 1rem;
+      }
+    }
   }
 
   &__img {
@@ -175,6 +185,14 @@ nav {
       transition: transform 0.3s;
     }
   }
+}
+.about-us__text-one a:hover,
+.about-us__text-one a:focus {
+  color: colors.$black;
+}
+.about-us__text-two a:hover,
+.about-us__text-two a:focus {
+  color: colors.$gold;
 }
 //////////////offers//////////////
 .offers {
